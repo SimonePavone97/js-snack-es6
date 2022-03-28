@@ -47,12 +47,30 @@ function getRandomInt(max) {
 /*let puntieFalli = getRandomInt(100)
 console.log(puntieFalli)*/
 
+
+
 for (let  i = 0;  i < squadreCalcio.length;  i++) {
-    let subiti = getRandomInt(100);
-    squadreCalcio[i].puntifatti  = subiti;
-    squadreCalcio[i].fallisubiti  = subiti;
-    //Destrutturizziamo (secondo metodo)
+    let element = getRandomInt(100);
+    squadreCalcio[i].puntifatti  = element;
+    squadreCalcio[i].fallisubiti  = element;
+    
 }
 
 console.log(squadreCalcio);
 
+const newArrayTeams = [];
+
+for (let i = 0; i < squadreCalcio.length; i++) {
+    let element = squadreCalcio[i];
+    
+    const { nome, fallisubiti } = element;
+
+    newArrayTeams.push(
+        { 
+            nome,
+            fallisubiti 
+        }  
+    )
+}
+
+console.log( newArrayTeams)
